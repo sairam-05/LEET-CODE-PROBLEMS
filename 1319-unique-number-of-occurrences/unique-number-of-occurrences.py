@@ -6,9 +6,6 @@ class Solution:
                 d[i]+=1
             else:
                 d[i]=1
-        l=[]
-        s=set()
-        for k,v in d.items():
-           l.append(v)
-           s.add(v)
-        return (len(s)==len(l))
+        l=d.values()
+        return (len(l)==len(set(l)))
+        
