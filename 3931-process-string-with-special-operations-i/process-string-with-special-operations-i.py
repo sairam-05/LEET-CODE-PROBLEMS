@@ -14,7 +14,4 @@ class Solution:
             elif i=="%":
                 res.reverse()
                 
-        s=""
-        for i in res:
-            s+=i
-        return s
+        return "".join(res)
