@@ -7,10 +7,10 @@
 class Solution:
     def sumRootToLeaf(self, root: Optional[TreeNode]) -> int:
         def dfs(node,path):
-            if not node:
+            if  node is None:
                 return 0
             path=(path<<1)+node.val
-            if not node.left and not node.right:
+            if node.left is None and  node.right is None:
                 return path
             return dfs(node.left,path)+dfs(node.right,path)
         return dfs(root,0)
